@@ -23,3 +23,8 @@ This Repo contains the MEN stack Website, Which is used for any research labs an
 - [passport.js](http://www.passportjs.org/)
 - [bootstarp](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
+
+
+Currently I am working on adding new features for the project like acheviements , project , news and blog sections.
+New ideas and suggestions are welcomed.
+Happy Coding :)
