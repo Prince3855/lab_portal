@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 var port = (process.env.PORT || 3000);
 
-const db= "mongodb+srv://gowtham:test1234@main.l0g6f.mongodb.net/labdb?retryWrites=true&w=majority";
+const db= "****************************************************************************************";
 mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true })
 .then(result=> app.listen(port))
 .catch(err=>console.log(err));
