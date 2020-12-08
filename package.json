@@ -17,8 +17,15 @@
   },
   "homepage": "https://github.com/igkishore/labs_webapp#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.16"
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "serve-favicon": "^2.5.0"
   }
 }

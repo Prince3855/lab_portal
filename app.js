@@ -1,48 +1,53 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const favicon = require('serve-favicon');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
+const path = require('path');
+
+// require routes
+const index = require('./routes/index');
 
 const app = express();
+
 app.set('view engine','ejs');
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
 var port = (process.env.PORT || 3000);
 
-const db= "****************************************************************************************";
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
+
+const db= "mongodb://localhost:27017/lab";
 mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true })
 .then(result=> app.listen(port))
 .catch(err=>console.log(err));
 
 
+// Mount routes
+app.use('/', index);
 
-app.get('/',function(req,res)
-{
-    res.render('home');
-})
-app.get('/home',function(req,res)
-{
-    res.redirect('/');
-})
 
-app.get('/acheivments',function(req,res)
-{
-    res.render('acheivments');
-})
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    const err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+  
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-app.get('/projects',function(req,res)
-{
-    res.render('projects');
-})
+  // render the error page
+  res.status(err.status || 500);
+  console.log(err)
+  res.render('error');
+});
 
-app.get('/news',function(req,res)
-{
-    res.render('news');
-})
-
-app.get('/blogs',function(req,res)
-{
-    res.render('blogs');
-})
-app.get('/members',function(req,res)
-{
-    res.render('members');
-})
