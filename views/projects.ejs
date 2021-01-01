@@ -11,29 +11,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
-    .card-columns {
-      @include media-breakpoint-only(sm) {
-        column-count: 2;
-      }
-
-      @include media-breakpoint-only(md) {
-        column-count: 3;
-      }
-
-      @include media-breakpoint-only(lg) {
-        column-count: 4;
-      }
-
-      @include media-breakpoint-only(xl) {
-        column-count: 5;
-      }
-    }
   </style>
 
 </head>
 
-<body>
+<body class="bg-light">
 
 
   <!--Nav bar-->
@@ -74,45 +61,119 @@
   <!--Nav bar-->
 
 
-
-
   <!--card-->
-  <div class="mx-4 my-4 card-deck">
-    <div class="card">
-      <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-          content.
-          .</p>
+  <div class="container">
+      <h2 class="text-center my-3" style="color: #EE0E0E;"><b>Projects</b></h2>
+      
+      <!-- Search form -->
+      <div class="active-pink-3 active-pink-4 mb-4">
+        <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search" aria-label="Search">
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+
+      <div class="text-center text-lg-right">
+        <a href="#" class="btn btn-danger btn-lg">
+          <span class="glyphicon glyphicon-plus-sign"></span> Create New Project
+        </a>
       </div>
-    </div>
-    <div class="card">
-      <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-          content.
-          .</p>
+    
+
+    <div class="row mt-4 mainDiv">
+
+
+      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
+        <div class="card-header text-white text-capitalize pt-5 text-wrap"
+          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
+          Full Stack Websiye </div>
+
+        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
+            card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <br>
+          <p class="text-center">
+            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React</span>
+            <span class="badge bg-danger text-white p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
+            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React
+              js</span>
+            <span class="badge bg-warning text-black p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Javascripts</span>
+            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">Javascripts</span>
+          </p>
+          <br>
+        </div>
+        <div class="card-footer bg-white">
+          <h5 class="card-title mb-1">Mentored by</h5>
+          <h6 style="color: blue;">Jhon Moris</h6>
+          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
+        </div>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+
+      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
+        <div class="card-header text-white text-capitalize pt-5 text-wrap"
+          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
+          Full Stack Websiye </div>
+
+        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
+            card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <br>
+          <p class="text-center">
+            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React</span>
+            <span class="badge bg-danger text-white p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
+            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React
+              js</span>
+            <span class="badge bg-warning text-black p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Javascripts</span>
+            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">Javascripts</span>
+          </p>
+          <br>
+        </div>
+        <div class="card-footer bg-white">
+          <h5 class="card-title mb-1">Mentored by</h5>
+          <h6 style="color: blue;">Jhon Moris</h6>
+          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-          content.
-          .</p>
+
+
+      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
+        <div class="card-header text-white text-capitalize pt-5 text-wrap"
+          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
+          Full Stack Websiye </div>
+
+        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
+            card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <br>
+          <p class="text-center">
+            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React</span>
+            <span class="badge bg-danger text-white p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
+            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React
+              js</span>
+            <span class="badge bg-warning text-black p-2 mb-1"
+              style="font-weight: 600;font-size: 15px;">Javascripts</span>
+            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">Javascripts</span>
+          </p>
+          <br>
+        </div>
+        <div class="card-footer bg-white">
+          <h5 class="card-title mb-1">Mentored by</h5>
+          <h6 style="color: blue;">Jhon Moris</h6>
+          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
+        </div>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
+
     </div>
   </div>
 

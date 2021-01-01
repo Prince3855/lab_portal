@@ -35,6 +35,7 @@ module.exports = mongoose.model('Project', projectSchema);
 
 
 // Project title
+// image
 // Description
 // Tags
 // Mentor Name

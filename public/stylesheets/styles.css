@@ -47,3 +47,10 @@ body{
     font-size: large;
     padding-right: 50px;
 }
+
+
+/* search bar */
+.active-pink-3 input[type=text] {
+    border: 1px solid #df231d;
+    box-shadow: 0 0 0 1px #e92828;
+  }
