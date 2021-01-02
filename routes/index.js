@@ -4,6 +4,8 @@ const router = express.Router();
 const { asyncErrorHandler } = require('../middlewares/index');
 const { getHome ,
     getProject,
+    getCreateProject,
+    postCreateProject,
     getAcheivments,
     getMember,
     getNews,
@@ -16,6 +18,12 @@ router.get('/', asyncErrorHandler(getHome));
 
 /* GET Projects page. */
 router.get('/projects', asyncErrorHandler(getProject));
+
+/* GET createProject page. */
+router.get('/createProject', getCreateProject);
+
+/* POST createProject page. */
+router.post('/createProject', asyncErrorHandler(postCreateProject));
 
 /* GET Acheivments page. */
 router.get('/acheivments', asyncErrorHandler(getAcheivments));

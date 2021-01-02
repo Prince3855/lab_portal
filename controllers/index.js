@@ -10,6 +10,15 @@ module.exports = {
     res.render('projects', {});
   },
 
+  getCreateProject(req, res, next) {
+    res.render('createProject',{});
+  },
+
+  async postCreateProject(req,res,next) {
+    console.log(req.body);
+    res.redirect('/projects');
+  },
+
   async getAcheivments(req, res, next) {
     res.render('acheivments', {});
   },

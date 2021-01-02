@@ -24,7 +24,7 @@ app.use(methodOverride('_method'));
 
 const db= "mongodb://localhost:27017/lab";
 mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true })
-.then(result=> app.listen(port))
+.then((result) => {app.listen(port); console.log('Connected to DB!');})
 .catch(err=>console.log(err));
 
 
