@@ -80,99 +80,42 @@
     <div class="row mt-4 mainDiv">
 
 
-      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
-        <div class="card-header text-white text-capitalize pt-5 text-wrap"
-          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
-          Full Stack Websiye </div>
+      <% projects.forEach((project) => { %>
 
-        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
-            card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <br>
-          <p class="text-center">
-            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React</span>
-            <span class="badge bg-danger text-white p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
-            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React
-              js</span>
-            <span class="badge bg-warning text-black p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Javascripts</span>
-            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">Javascripts</span>
-          </p>
-          <br>
+        <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
+          <div class="card-header text-white text-capitalize pt-5 text-wrap"
+            style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
+            <%= project.title %> </div>
+  
+          <img src="<%= project.image.path %>" class="card-img-top" style="height: 250px;" alt="project image...">
+          <div class="card-body">
+            <p class="card-text" style="font-weight: 500;"><%= project.description %></p>
+            <br>
+            <p class="text-center">
+              <% for(let i=0 ; i<project.tags.length ; i++) { %>
+                <% if(i%4 == 0) { %>
+                  <span class="badge bg-danger text-white p-2 mb-1" style="font-weight: 500;font-size: 15px;"><%= project.tags[i] %></span>
+                <% } else if(i%4 == 1) { %>
+                  <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 500;font-size: 15px;"><%= project.tags[i] %></span>
+                <% } else if (i%4 == 2) { %>
+                  <span class="badge bg-warning text-white p-2 mb-1" style="font-weight: 500;font-size: 15px;"><%= project.tags[i] %></span>
+                <% } else { %>
+                  <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 500;font-size: 15px;"><%= project.tags[i] %></span>
+                <% } %>
+              <% } %>
+              
+            </p>
+            <br>
+          </div>
+          <div class="card-footer bg-white">
+            <h5 class="card-title mb-1"><b>Mentored by</b></h5>
+            <h5 style="color: blue;"><%= project.mentor.name %></h5>
+            <h5 style="color: blue;">( <%= project.mentor.email %> )</h5>
+            <a href="<%= project.link %>" class="btn btn-success col-12" type="button" target="_blank"><b>View Project</b></a>
+          </div>
         </div>
-        <div class="card-footer bg-white">
-          <h5 class="card-title mb-1">Mentored by</h5>
-          <h6 style="color: blue;">Jhon Moris</h6>
-          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
-        </div>
-      </div>
 
-      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
-        <div class="card-header text-white text-capitalize pt-5 text-wrap"
-          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
-          Full Stack Websiye </div>
-
-        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
-            card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <br>
-          <p class="text-center">
-            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 550;font-size: 15px;">React</span>
-            <span class="badge bg-danger text-white p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
-            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 550;font-size: 15px;">React
-              js</span>
-            <span class="badge bg-warning text-black p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Javascripts</span>
-            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 550;font-size: 15px;">Javascripts</span>
-          </p>
-          <br>
-        </div>
-        <div class="card-footer bg-white">
-          <h5 class="card-title mb-1">Mentored by</h5>
-          <h6 style="color: blue;">Jhon Moris</h6>
-          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
-        </div>
-      </div>
-
-
-      <div class="card col-xl-4 col-lg-6 col-sm-9 col-xs-12 mb-4 px-0 shadow-lg mx-auto">
-        <div class="card-header text-white text-capitalize pt-5 text-wrap"
-          style="background: linear-gradient(to bottom right,#05a95b , #87e052 ); font-weight: 650; font-size: 25px;">
-          Full Stack Websiye </div>
-
-        <img src="/images/tmp.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text" style="font-weight: 550;">This is a Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Labore assumenda facilis ducimus, libero nam expedita omnis magni laudantium culpa obcaecati? wider
-            card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <br>
-          <p class="text-center">
-            <span class="badge bg-primary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React</span>
-            <span class="badge bg-danger text-white p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Web-devlopment</span>
-            <span class="badge bg-secondary text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">React
-              js</span>
-            <span class="badge bg-warning text-black p-2 mb-1"
-              style="font-weight: 600;font-size: 15px;">Javascripts</span>
-            <span class="badge bg-info text-white p-2 mb-1" style="font-weight: 600;font-size: 15px;">Javascripts</span>
-          </p>
-          <br>
-        </div>
-        <div class="card-footer bg-white">
-          <h5 class="card-title mb-1">Mentored by</h5>
-          <h6 style="color: blue;">Jhon Moris</h6>
-          <button class="btn btn-success col-12" type="button"><b>View Project</b></button>
-        </div>
-      </div>
+      <% }); %>
 
     </div>
   </div>

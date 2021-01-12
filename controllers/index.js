@@ -1,3 +1,5 @@
+const Project = require('../models/projects');
+
 
 module.exports = {
 
@@ -6,8 +8,8 @@ module.exports = {
   },
 
   async getProject(req, res, next) {
-    // let projects = await projects.find({});
-    res.render('projects', {});
+    let projects = await Project.find({});
+    res.render('projects', {projects});
   },
 
   getCreateProject(req, res, next) {
@@ -15,7 +17,11 @@ module.exports = {
   },
 
   async postCreateProject(req,res,next) {
-    console.log(req.body);
+    let { path , filename } = req.file;
+    req.body.image = { path , filename };
+    if(req.body.tags == undefined) req.body.tags = [];
+    let project = new Project(req.body);
+    await project.save();
     res.redirect('/projects');
   },
 

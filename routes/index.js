@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const { storage } = require('../cloudinary/index');
+const upload = multer({ storage });
 
 const { asyncErrorHandler } = require('../middlewares/index');
 const { getHome ,
@@ -23,7 +26,7 @@ router.get('/projects', asyncErrorHandler(getProject));
 router.get('/createProject', getCreateProject);
 
 /* POST createProject page. */
-router.post('/createProject', asyncErrorHandler(postCreateProject));
+router.post('/createProject',upload.single('image'), asyncErrorHandler(postCreateProject));
 
 /* GET Acheivments page. */
 router.get('/acheivments', asyncErrorHandler(getAcheivments));

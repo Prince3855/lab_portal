@@ -7,13 +7,13 @@ const projectSchema = new Schema({
         type: String,
         required: true
     },
+    image : { path: String , filename: String },
 	description: {
         type: String,
         required: true
     },
     tags: {
         type: [String],
-        required: true
     },
     mentor: {
         name: {
